@@ -190,6 +190,16 @@ Star / Issue / PR はどのリポにも大歓迎。
 
 ---
 
+## 📚 ドキュメント
+
+- 📖 **[Vision](https://github.com/Akari-OS/.github/blob/main/VISION.md)** — 構想・原則・7 エージェントの詳細
+- 🗺 **[Roadmap](https://github.com/Akari-OS/.github/blob/main/ROADMAP.md)** — 段階的ロードマップ
+- 🤝 **[Contributing](https://github.com/Akari-OS/.github/blob/main/CONTRIBUTING.md)** — 貢献方法・コーディング規約
+- 📜 **[Code of Conduct](https://github.com/Akari-OS/.github/blob/main/CODE_OF_CONDUCT.md)** — 行動規範
+- 🔒 **[Security Policy](https://github.com/Akari-OS/.github/blob/main/SECURITY.md)** — 脆弱性報告
+
+---
+
 > **Akari-OS は「ツール」ではない。**
 > **あなた専属の AI チームが住んでいる、個人のための OS。**
 > **開いたら、もう全員いる。もう動いてる。あなたは「これやって」と言うだけ。**
