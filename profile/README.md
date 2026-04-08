@@ -207,4 +207,16 @@ Star / Issue / PR はどのリポにも大歓迎。
 
 ---
 
-*Built by [@KYO-kobo](https://github.com/KYO-kobo) and a growing community.*
+## 💡 名前の由来
+
+**Akari**（あかり / 明かり）は日本語で「光・明るさ」を意味する。
+そして "**A**kar**i**" の最初と最後の文字を取ると "**AI**"、そこに "**OS**" を加えると **"AI OS"** になる。
+
+🇯🇵 **日本発の AI OS** — クラウド依存ではなく、ローカルで動く、個人のための AI OS。
+その先駆けになりたいという願いを込めて。
+
+詳しい背景は [Vision](https://github.com/Akari-OS/.github/blob/main/VISION.md#なぜ-akari-os-なのか--名前の由来) を参照。
+
+---
+
+*Built by [@KYO-kobo](https://github.com/KYO-kobo) — **GTM パイオニア**、そして成長中のコミュニティ。*
