@@ -219,4 +219,4 @@ Star / Issue / PR はどのリポにも大歓迎。
 
 ---
 
-*Built by [@KYO-kobo](https://github.com/KYO-kobo) — **GTM パイオニア**、そして成長中のコミュニティ。*
+*Built by [@ryoma-nakajima](https://github.com/ryoma-nakajima) — **GTM パイオニア**、そして成長中のコミュニティ。*
