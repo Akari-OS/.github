@@ -1,78 +1,198 @@
 # Akari-OS
 
-> **Your personal AI team, visible at work.**
-> A local-first, AI-native app constellation for independent creators.
+> **個人のための AI OS** — あなた専属の AI チームが、目に見える形で働いてくれる OS。
+
+ローカルファーストで動く、AI ネイティブなアプリ・コンステレーション。
+1 つの巨大アプリではなく、**複数の専門アプリがローカルで繋がり合う**エコシステム。
 
 ---
 
-## What is Akari-OS?
+## 解きたい問題
 
-Akari-OS is an ecosystem of specialized apps — video editor, CMS, knowledge store, and more — that run locally and talk to each other. Instead of one giant AI-powered app, you get a **team of AI agents** working across apps, sharing memory, and seeing the same context.
+> ひとりのクリエイターが、チームを雇わずに、
+> アイデアからお金に変わるまでの全工程を回せたら？
 
-- 🎬 **Local-first** — your data never leaves your machine
-- 🧠 **AI-native** — every app understands context from day one
-- 🔗 **Constellation** — apps are independent but share a common data and memory layer
-- 🆓 **Open source** — AGPL / Apache licensed, always free to run
+動画を作る。ブログに載せる。SNS で告知する。分析して改善する。
+今これをやるには、4 人以上のチームか、10 個のバラバラなツールが要る。
 
-## The 3-layer AI stack
+Akari-OS は、**あなた専属の AI チーム**がこれを全部やる。
+しかもローカルで。速くて、安くて、あなたのデータはあなたのもの。
 
-Most "AI-powered" tools only touch the prompt layer. Akari-OS is built on all three:
+---
+
+## 解決策: あなた専属の AI チーム
+
+開いたら、この 7 人がいる。名前も顔もある。設定は不要。
+
+| 役割 | 担当 |
+|---|---|
+| 🎯 **パートナー** | あなたの窓口。指示を受けてチームに振る |
+| 🎬 **スタジオ担当** | 動画 / デザイン / 記事を作る |
+| 📱 **オペレーター** | SNS / メール / 決済を動かす（寝てる間に） |
+| 🔍 **リサーチャー** | 必要な情報を集めてくる |
+| 🛡 **ガーディアン** | 品質とブランドを守る |
+| 🧠 **メモリスト** | 好みと経験を覚える |
+| 📊 **アナリスト** | 結果を測って改善を提案する |
+
+チャットログを読み返す必要はない。**全員の状態が一目でわかる**。
+承認が必要なものだけタップする。
+
+---
+
+## 3 つの原則
+
+### 1. 決め打ち
+エージェントの構成は**最初から決まっている**。ユーザーが設定する必要はない。
+開いたら、もう全員いる。もう動いてる。あなたは「これやって」と言うだけ。
+
+### 2. 見える
+エージェントが何をしているかが**視覚的にわかる**。
+動いてるのが画面の上で見える。ログを遡らなくていい。
+
+### 3. 寄り添う
+完全自動ではない。**あなたの感性を最大化するツール。**
+AI が得意なこと（大量処理、24 時間稼働）は AI。
+人間が得意なこと（「これが好き」「ここをこう変えたい」）は視覚的に指示する。
+
+---
+
+## 3 層構造の AI スタック
+
+「AI 搭載ツール」ではなく「AI OS」である理由。
 
 ```
 ┌─────────────────────────────────────────┐
-│ Harness       — how AI is orchestrated  │
-│ Job system, approval flow, autonomy     │
+│ ハーネス    ─ AI をどう走らせるか         │
+│ Job System / 承認フロー / 自律レベル      │
 ├─────────────────────────────────────────┤
-│ Context       — what AI sees            │
-│ M2C, Pool, Memory (AMP)                 │
+│ コンテキスト ─ AI に何を見せるか          │
+│ M2C / Pool / Memory (AMP)              │
 ├─────────────────────────────────────────┤
-│ Prompt        — how AI is instructed    │
-│ Skill manifests, agent definitions      │
+│ プロンプト   ─ AI への指示を最適化        │
+│ Skill Manifest / エージェント定義        │
 └─────────────────────────────────────────┘
+
+Adobe / Canva  = 第1層（プロンプト）だけ → 「AI 搭載」
+Akari-OS       = 3 層全部              → 「AI OS」
 ```
 
-## Ecosystem
+---
 
-### 🧬 Core layer — protocols and shared data
+## 星座のように繋がるアプリ群
 
-| Repository | What it is |
+Akari-OS は 1 つの巨大アプリではない。
+**複数の専門アプリが、ローカルで繋がり合っている。**
+
+```
+┌──────────┐    ┌──────────┐    ┌──────────┐
+│  Akari   │◄──►│  Akari   │◄──►│  Akari   │
+│  Video   │    │  CMS     │    │  Notes   │
+└────┬─────┘    └────┬─────┘    └────┬─────┘
+     │               │               │
+─────┴───────────────┴───────────────┴─────
+              共有層（ローカル）
+┌─────────────┐ ┌──────────────┐ ┌──────────┐
+│ Pool        │ │ Memory (AMP) │ │ Context  │
+│ 素材・成果物  │ │ 好み・学習    │ │ M2C      │
+└─────────────┘ └──────────────┘ └──────────┘
+```
+
+- 動画を作ったら、**アップロードなし**で CMS に反映
+- CMS で好んだデザインが SNS 投稿にも自動で反映（Memory 共有）
+- 全メディアは Pool 登録時に AI が意味を理解（M2C コンテキスト化）
+
+各アプリは独立（技術スタックも自由）。でもローカルで繋がっている。
+新しいアプリを追加すると、エコシステム全体が強くなる。
+
+---
+
+## リポジトリ一覧
+
+### 🧬 Core 層 — プロトコルと共有データ
+
+| Repository | 内容 |
 |---|---|
-| **[pool](https://github.com/Akari-OS/pool)** | Universal Knowledge Store. SQLite + FTS5 + Analyzer plugins. MCP server. |
-| **[m2c](https://github.com/Akari-OS/m2c)** | Media-to-Context protocol. Turns media into structured AI context. |
-| **[amp](https://github.com/Akari-OS/amp)** | Agent Memory Protocol. Standardizes memory storage, retrieval, and decay. |
+| **[pool](https://github.com/Akari-OS/pool)** | Universal Knowledge Store。SQLite + FTS5 + Analyzer プラグイン + MCP サーバー |
+| **[m2c](https://github.com/Akari-OS/m2c)** | Media-to-Context プロトコル。メディアを構造化された AI コンテキストに変換 |
+| **[amp](https://github.com/Akari-OS/amp)** | Agent Memory Protocol。記憶の保存・検索・減衰を標準化 |
 
-### 📱 Apps layer — what users interact with
+### 📱 Apps 層 — ユーザーが触る場所
 
-| Repository | What it is |
+| Repository | 内容 |
 |---|---|
-| **[video](https://github.com/Akari-OS/video)** | Akari Video — desktop video editor (Tauri + Rust + React) |
-| **[cloud](https://github.com/Akari-OS/cloud)** | Akari Cloud — optional backend for auth, credits, marketplace |
-| **[voice](https://github.com/Akari-OS/voice)** | Community feedback + changelog |
-| **[lp](https://github.com/Akari-OS/lp)** | Landing page (akari-oss.app) |
+| **[video](https://github.com/Akari-OS/video)** | Akari Video — デスクトップ動画編集（Tauri + Rust + React） |
+| **[cloud](https://github.com/Akari-OS/cloud)** | Akari Cloud — 認証・クレジット・マーケットのバックエンド |
+| **[voice](https://github.com/Akari-OS/voice)** | コミュニティフィードバック + チェンジログ |
+| **[lp](https://github.com/Akari-OS/lp)** | ランディングページ (akari-oss.app) |
 
-### 📚 Documentation
+---
 
-- **Vision** — the story and principles behind Akari-OS
-- **Roadmap** — where we're going
-- **Contributing** — how to help
+## なぜローカルか
 
-## Philosophy
+```
+クラウド依存:
+  動画アップロード（5 分待ち）→ AI 処理（課金）→ ダウンロード（3 分待ち）
+  = 遅い、高い、オフラインで使えない
 
-> **Akari-OS is not a tool. It's an OS where your personal AI team lives.**
-> Open the app and they're all there. Already working. You just say "do this".
+Akari-OS:
+  Pool に既にある → AI は既に理解してる → 結果は即反映
+  = 速い、安い、オフラインでも全機能動作
+```
 
-No configuration. No agent setup. No prompt engineering. Just a team that understands your work, remembers your preferences, and keeps going while you sleep.
+### コスト革命
 
-## Status
+```
+従来（月額サブスク地獄）:
+  Premiere + Canva + Buffer + ConvertKit + ... = 月 5〜30 万円
 
-🚧 **Early development.** Most repos are in active Phase development. Stars, issues, and PRs welcome on any repo.
+Akari-OS:
+  ソフト: 無料（OSS）
+  AI:    ローカル推論（Qwen / Llama）でほぼ無料
+  重い処理だけ: Akari Cloud（月数千円）
+```
 
-## License
+---
 
-Each repo carries its own license:
+## 誰のためか
+
+### GTM エンジニア — 1 人が 3 チーム分
+
+```
+従来:      クリエイター + マーケター + エンジニア + オペレーター = 4 人以上
+Akari-OS:  あなた + AI チーム                                 = 1 人で全部
+```
+
+- **プロダクトが決まっている人**: やりたいことはある → AI チームが動く
+- **これから始めたい人**: 何から始めればいいかわからない → パートナーが「まずこれ」と提案
+- **ソロクリエイター**: 全工程を 1 人で回したい → 寝てる間も進む
+
+---
+
+## ステータス
+
+🚧 **Early development** — 主要リポは Phase 開発中。
+Star / Issue / PR はどのリポにも大歓迎。
+
+- **pool**: Phase 4.5（Wiki compile + Linter 実装中）— 最も進んでる旗艦リポ
+- **video**: Step 2 完了（CLI + GUI + MCP サーバー）
+- **m2c / amp**: v0.1〜0.2 Draft
+- **cloud**: Phase 4 完了（認証 / クレジット / マーケット）
+
+---
+
+## ライセンス
+
+リポジトリごとに個別設定：
+
 - **pool**: AGPL-3.0
-- **m2c**, **amp**: Apache-2.0
-- **video**, **cloud**, **voice**, **lp**: see individual repos
+- **m2c / amp**: Apache-2.0
+- **video / cloud / voice / lp**: 各リポジトリを参照
+
+---
+
+> **Akari-OS は「ツール」ではない。**
+> **あなた専属の AI チームが住んでいる、個人のための OS。**
+> **開いたら、もう全員いる。もう動いてる。あなたは「これやって」と言うだけ。**
 
 ---
 
