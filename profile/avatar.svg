@@ -21,8 +21,8 @@
     </radialGradient>
   </defs>
 
-  <!-- 背景: 角丸スクエア（GitHub は円形にクロップするが、正方形のままでも美しいように） -->
-  <rect width="512" height="512" rx="120" fill="url(#bgDark)"/>
+  <!-- 背景: フルスクエア（GitHub は円形にクロップするので角を埋めないと隙間が出る） -->
+  <rect width="512" height="512" fill="url(#bgDark)"/>
 
   <!-- 中央のグロー（"明かり" のメタファー） -->
   <circle cx="256" cy="280" r="210" fill="url(#glow)"/>
