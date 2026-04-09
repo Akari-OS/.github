@@ -1,0 +1,54 @@
+name: Markdown Lint (reusable)
+
+# AKARI SDD ガードレール — Markdown フォーマットとリンク切れをチェックする reusable workflow
+# 各実装リポから以下のように呼び出す:
+#
+#   jobs:
+#     markdown:
+#       uses: Akari-OS/.github/.github/workflows/markdown-lint.yml@main
+
+on:
+  workflow_call:
+    inputs:
+      globs:
+        description: 'lint 対象の glob パターン'
+        required: false
+        type: string
+        default: '**/*.md'
+      check_links:
+        description: 'リンク切れチェックを実行するか'
+        required: false
+        type: boolean
+        default: true
+
+jobs:
+  markdownlint:
+    name: markdownlint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run markdownlint-cli2
+        uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: ${{ inputs.globs }}
+
+  link-check:
+    name: Link check (lychee)
+    if: ${{ inputs.check_links }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --exclude-loopback
+            --exclude-path node_modules
+            --exclude-path .git
+            './**/*.md'
+          fail: false

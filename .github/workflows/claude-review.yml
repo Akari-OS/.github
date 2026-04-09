@@ -1,0 +1,70 @@
+name: Claude Review (reusable)
+
+# AKARI SDD ガードレール — Claude Code Action による自動 PR レビュー
+# 各実装リポから以下のように呼び出す:
+#
+#   jobs:
+#     claude-review:
+#       if: github.event_name == 'pull_request'
+#       uses: Akari-OS/.github/.github/workflows/claude-review.yml@main
+#       secrets:
+#         ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+#
+# 前提:
+# - 各リポの Settings → Secrets に ANTHROPIC_API_KEY を登録
+# - または `claude /install-github-app` でセットアップ済み
+
+on:
+  workflow_call:
+    inputs:
+      prompt_extra:
+        description: 'レビュープロンプトに追加する文脈（リポ固有の指示）'
+        required: false
+        type: string
+        default: ''
+    secrets:
+      ANTHROPIC_API_KEY:
+        required: true
+
+jobs:
+  review:
+    name: Claude Code Review
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Claude Code Action
+        uses: anthropics/claude-code-action@main
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            この PR を AKARI エコシステムの規約に沿ってレビューしてください。
+
+            ## チェック観点
+            1. **SDD 整合性**:
+               - 関連 spec（`docs/specs/` または `docs/sdd/specs/`）と実装が一致しているか
+               - spec-id が commit message に含まれているか（`[spec: AKARI-XXX-NNN]`）
+               - spec の status が適切か（実装完了なら `implemented` に更新されているか）
+            2. **ルール 8 違反**:
+               - frontmatter の必須フィールド（spec-id, status, version, created）
+               - 命名規則（spec-*.md / spec-reverse-*.md / ADR-NNN-*.md）
+            3. **コード品質**:
+               - 過度な抽象化、デッドコード、コメントアウトされたコード
+               - エラーハンドリング、セキュリティ、テストカバレッジ
+            4. **ドキュメント**:
+               - 新規ファイル追加時の `INDEX.md` 更新（ルール 4）
+               - リンク切れ、見出しレベル
+
+            ## 出力フォーマット
+            - 日本語、関西弁の相棒口調
+            - 致命的な問題は ❌、改善提案は 💡、良かった点は ✨
+            - 200-400 字程度で簡潔に
+
+            ${{ inputs.prompt_extra }}

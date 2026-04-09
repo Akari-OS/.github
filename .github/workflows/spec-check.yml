@@ -1,0 +1,132 @@
+name: Spec Check (reusable)
+
+# AKARI SDD ガードレール — spec ファイルの frontmatter を検証する reusable workflow
+# 各実装リポから以下のように呼び出す:
+#
+#   jobs:
+#     spec-check:
+#       uses: Akari-OS/.github/.github/workflows/spec-check.yml@main
+#       with:
+#         spec_path: docs/specs
+
+on:
+  workflow_call:
+    inputs:
+      spec_path:
+        description: 'spec ファイルが置かれているディレクトリ（複数の場合は空白区切り）'
+        required: false
+        type: string
+        default: 'docs/specs docs/sdd/specs'
+      adr_path:
+        description: 'ADR ファイルが置かれているディレクトリ'
+        required: false
+        type: string
+        default: 'docs/adr docs/sdd/adr'
+      strict:
+        description: 'true なら警告も失敗扱いにする'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  validate-spec:
+    name: Validate spec frontmatter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate spec files
+        shell: bash
+        run: |
+          set -e
+          ERRORS=0
+          WARNINGS=0
+
+          for dir in ${{ inputs.spec_path }}; do
+            if [ ! -d "$dir" ]; then
+              echo "::notice::spec directory not found, skipping: $dir"
+              continue
+            fi
+
+            for f in $(find "$dir" -type f -name "spec-*.md" 2>/dev/null); do
+              echo "Checking: $f"
+
+              # frontmatter 必須フィールド
+              for field in spec-id status version created; do
+                if ! awk '/^---$/{flag=!flag; next} flag' "$f" | grep -qE "^${field}:"; then
+                  echo "::error file=$f::missing required frontmatter field: ${field}"
+                  ERRORS=$((ERRORS+1))
+                fi
+              done
+
+              # spec-id 形式 AKARI-{REPO}-{NNN}
+              SPEC_ID=$(awk '/^---$/{flag=!flag; next} flag' "$f" | grep -E '^spec-id:' | sed 's/^spec-id:[[:space:]]*//')
+              if [ -n "$SPEC_ID" ] && ! echo "$SPEC_ID" | grep -qE '^AKARI-[A-Z]+-[0-9]{3}$'; then
+                echo "::warning file=$f::spec-id should match AKARI-{REPO}-{NNN} (got: $SPEC_ID)"
+                WARNINGS=$((WARNINGS+1))
+              fi
+
+              # status の値チェック
+              STATUS=$(awk '/^---$/{flag=!flag; next} flag' "$f" | grep -E '^status:' | sed 's/^status:[[:space:]]*//' | sed 's/[[:space:]]*#.*//')
+              case "$STATUS" in
+                draft|review|accepted|implemented|deprecated) ;;
+                *) echo "::error file=$f::invalid status: $STATUS (must be draft|review|accepted|implemented|deprecated)"
+                   ERRORS=$((ERRORS+1)) ;;
+              esac
+            done
+          done
+
+          echo ""
+          echo "===== Summary ====="
+          echo "Errors:   $ERRORS"
+          echo "Warnings: $WARNINGS"
+
+          if [ "$ERRORS" -gt 0 ]; then
+            exit 1
+          fi
+          if [ "${{ inputs.strict }}" = "true" ] && [ "$WARNINGS" -gt 0 ]; then
+            exit 1
+          fi
+
+  validate-adr:
+    name: Validate ADR frontmatter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate ADR files
+        shell: bash
+        run: |
+          set -e
+          ERRORS=0
+
+          for dir in ${{ inputs.adr_path }}; do
+            if [ ! -d "$dir" ]; then
+              echo "::notice::ADR directory not found, skipping: $dir"
+              continue
+            fi
+
+            for f in $(find "$dir" -type f -name "ADR-*.md" 2>/dev/null); do
+              echo "Checking: $f"
+
+              for field in adr-id status created; do
+                if ! awk '/^---$/{flag=!flag; next} flag' "$f" | grep -qE "^${field}:"; then
+                  echo "::error file=$f::missing required ADR field: ${field}"
+                  ERRORS=$((ERRORS+1))
+                fi
+              done
+
+              STATUS=$(awk '/^---$/{flag=!flag; next} flag' "$f" | grep -E '^status:' | sed 's/^status:[[:space:]]*//' | sed 's/[[:space:]]*#.*//')
+              case "$STATUS" in
+                proposed|accepted|rejected|deprecated|superseded) ;;
+                *) echo "::error file=$f::invalid ADR status: $STATUS"
+                   ERRORS=$((ERRORS+1)) ;;
+              esac
+            done
+          done
+
+          if [ "$ERRORS" -gt 0 ]; then
+            exit 1
+          fi
