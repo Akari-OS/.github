@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Akari-OS avatar">
+  <defs>
+    <!-- 背景: ダーク -->
+    <linearGradient id="bgDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </linearGradient>
+
+    <!-- メインのオレンジグラデーション（"明かり" の光） -->
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdba74"/>
+      <stop offset="50%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+
+    <!-- A の背後のグロー -->
+    <radialGradient id="glow" cx="50%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#f97316" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 背景: 角丸スクエア（GitHub は円形にクロップするが、正方形のままでも美しいように） -->
+  <rect width="512" height="512" rx="120" fill="url(#bgDark)"/>
+
+  <!-- 中央のグロー（"明かり" のメタファー） -->
+  <circle cx="256" cy="280" r="210" fill="url(#glow)"/>
+
+  <!-- メインの "A" -->
+  <text x="256" y="382" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif"
+        font-size="380" font-weight="800"
+        fill="url(#orangeGrad)"
+        letter-spacing="-8">A</text>
+
+  <!-- 右肩の小さいドット（"i" の暗示 + アクセント） -->
+  <circle cx="378" cy="152" r="16" fill="url(#orangeGrad)"/>
+</svg>
