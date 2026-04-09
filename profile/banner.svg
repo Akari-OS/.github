@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" role="img" aria-label="Akari-OS — 個人のための AI OS">
+  <defs>
+    <!-- 背景グラデーション: ダークな深淵 -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="50%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </linearGradient>
+
+    <!-- タイトル用オレンジグラデーション（"明かり" のイメージ） -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdba74"/>
+      <stop offset="50%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+
+    <!-- 装飾グロー用グラデーション -->
+    <radialGradient id="glowOrange" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowAmber" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1280" height="360" fill="url(#bg)"/>
+
+  <!-- 装飾: 光の粒（明かりのメタファー） -->
+  <circle cx="180" cy="90" r="200" fill="url(#glowOrange)"/>
+  <circle cx="1100" cy="290" r="220" fill="url(#glowAmber)"/>
+
+  <!-- 細かい星屑 -->
+  <circle cx="100" cy="60" r="1.5" fill="#fdba74" opacity="0.6"/>
+  <circle cx="1180" cy="80" r="1.2" fill="#fbbf24" opacity="0.5"/>
+  <circle cx="950" cy="50" r="1" fill="#fdba74" opacity="0.4"/>
+  <circle cx="60" cy="280" r="1.3" fill="#f97316" opacity="0.5"/>
+  <circle cx="1220" cy="310" r="1" fill="#fdba74" opacity="0.4"/>
+  <circle cx="320" cy="320" r="1.1" fill="#fbbf24" opacity="0.4"/>
+
+  <!-- メインタイトル: Akari-OS -->
+  <text x="640" y="180" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif"
+        font-size="140" font-weight="800"
+        fill="url(#titleGrad)"
+        letter-spacing="-3">Akari-OS</text>
+
+  <!-- 細い区切り線 -->
+  <line x1="540" y1="205" x2="740" y2="205" stroke="#f97316" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- 日本語タグライン -->
+  <text x="640" y="252" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Segoe UI', sans-serif"
+        font-size="26" font-weight="300" fill="#e5e5e5"
+        letter-spacing="8">個人のための AI OS</text>
+
+  <!-- 英語サブタグライン -->
+  <text x="640" y="295" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif"
+        font-size="15" font-weight="500" fill="#737373"
+        letter-spacing="4">YOUR PERSONAL AI TEAM, VISIBLE AT WORK</text>
+
+  <!-- 下部: A...I = AI の暗示 -->
+  <text x="640" y="335" text-anchor="middle"
+        font-family="-apple-system, 'SF Mono', 'Menlo', monospace"
+        font-size="11" font-weight="400" fill="#525252"
+        letter-spacing="6">A · K · A · R · I → AI OS</text>
+</svg>
