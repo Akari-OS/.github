@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="./banner.svg" alt="Akari-OS — 個人のための AI OS" width="100%">
+</div>
+
 # Akari-OS
 
 > **個人のための AI OS** — あなた専属の AI チームが、目に見える形で働いてくれる OS。
