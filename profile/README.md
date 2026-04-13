@@ -131,7 +131,7 @@ Module や独立アプリが増えるほど、同じ共有層を通じてエコ�
 
 | Repository | 内容 |
 |---|---|
-| **[pool](https://github.com/Akari-OS/pool)** | Universal Knowledge Store。SQLite + FTS5 + Analyzer プラグイン + MCP サーバー |
+| **[pool](https://github.com/Akari-OS/pool)** | Universal Knowledge Store。SQLite + FTS5 + Analyzer + MCP サーバー (11 ツール) + Obsidian 同期 |
 | **[m2c](https://github.com/Akari-OS/m2c)** | Media-to-Context プロトコル。メディアを構造化された AI コンテキストに変換 |
 | **[amp](https://github.com/Akari-OS/amp)** | Agent Memory Protocol。記憶の保存・検索・減衰を標準化 |
 
@@ -192,7 +192,7 @@ Akari-OS:  あなた + AI チーム                                 = 1 人で�
 🚧 **Early development** — 主要リポは Phase 開発中。
 Star / Issue / PR はどのリポにも大歓迎。
 
-- **pool**: Phase 4.5（Wiki compile + Linter 実装中）— 最も進んでる旗艦リポ
+- **pool**: Phase 6 完了（MCP 11 ツール + Obsidian 同期 + プリセット）— 最も進んでる旗艦リポ。次は Phase 7（Shell 統合）
 - **video**: Step 2 完了（CLI + GUI + MCP サーバー）
 - **m2c / amp**: v0.1〜0.2 Draft
 - **cloud**: Phase 4 完了（認証 / クレジット / マーケット）

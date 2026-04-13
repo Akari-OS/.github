@@ -38,7 +38,7 @@ Phase 5: エコシステム拡張（サードパーティ Module 受け入れ）
 | **Agent daemon** (L1 最小 4 人: Partner / Studio / Memory / Operator) | 将来 `Akari-OS/agents` | ⬜ 設計中 |
 | **MCP クライアント基盤** | agents 内 | ⬜ |
 | **Tiny Writer Module** (140/280 字 X 投稿専用) | Shell 内 | ⬜ spec 完了 |
-| Universal Knowledge Store 基盤 | [pool](https://github.com/Akari-OS/pool) | 🚧 Phase 4.5 |
+| Universal Knowledge Store 基盤 | [pool](https://github.com/Akari-OS/pool) | 🚧 Phase 6 完了・Phase 7 準備中 |
 | Media-to-Context プロトコル | [m2c](https://github.com/Akari-OS/m2c) | 🚧 v0.2 Draft |
 | Agent Memory Protocol | [amp](https://github.com/Akari-OS/amp) | 🚧 v0.1 Draft |
 | クラウドバックエンド | [cloud](https://github.com/Akari-OS/cloud) | 🚧 Phase 4 完了 |
@@ -56,10 +56,10 @@ Phase 5: エコシステム拡張（サードパーティ Module 受け入れ）
 | 3: analyzer | Analyzer trait、ArticleAnalyzer MVP | ✅ |
 | 3.5: 制限解消 | FTS5 trigram、HTML 対応、LLM リトライ | ✅ |
 | 4: wiki + lint | Wiki compile、Relations CRUD、Linter (2/4 種) | ✅ |
-| **4.5: lint 完成** | **Inconsistency / ConnectionGap + Relation CLI** | 🟡 **次** |
-| 5: filed back | Obsidian 双方向同期、関係性自動推論 | ⬜ |
-| 6: MCP server | rmcp で MCP server 化 | ⬜ |
-| 7: Shell Module 統合 | Shell Module (Pool Browser / Writer 等) から pool-core 利用 | ⬜ |
+| 4.5: lint + relation | lint show、Relation CLI、Analyzer 自動 relation | ✅ |
+| 5: sync + presets | Obsidian 双方向同期、モデルプリセット 6 種 | ✅ |
+| 6: MCP full | MCP ツール 11 種 + リソース 3 種 + Streamable HTTP | ✅ |
+| **7: Shell 統合** | **Shell Module (Pool Browser / Writer 等) から pool-core 利用** | 🟡 **次** |
 | 8: エコシステム拡大 | Shell Module 生態系の成熟（Bundled Module 配布） | ⬜ |
 
 ---
