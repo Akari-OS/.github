@@ -157,7 +157,7 @@ Core 層は **4 つのプロトコル**で AI エージェント向け OS レベ
 | **[video](https://github.com/Akari-OS/video)** | Akari Video — デスクトップ動画編集（Tauri + Rust + React） |
 | **[cloud](https://github.com/Akari-OS/cloud)** | Akari Cloud — 認証・クレジット・マーケットのバックエンド |
 | **[voice](https://github.com/Akari-OS/voice)** | コミュニティフィードバック + チェンジログ |
-| **[lp](https://github.com/Akari-OS/lp)** | ランディングページ (akari-oss.app) |
+| **[lp](https://github.com/Akari-OS/lp)** | ホームページ (akari-oss.app) |
 
 ---
 

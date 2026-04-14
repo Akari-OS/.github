@@ -43,7 +43,7 @@ Phase 5: エコシステム拡張（サードパーティ Module 受け入れ）
 | Agent Memory Protocol | [amp](https://github.com/Akari-OS/amp) | 🚧 v0.1 Draft |
 | Agent Context Engineering Framework | [ace](https://github.com/Akari-OS/ace) | 🆕 v0.1-draft 公開 (2026-04-14) / Phase C 素振り中 |
 | クラウドバックエンド | [cloud](https://github.com/Akari-OS/cloud) | 🚧 Phase 4 完了 |
-| ランディングページ | [lp](https://github.com/Akari-OS/lp) | 🚧 |
+| ホームページ | [lp](https://github.com/Akari-OS/lp) | 🚧 |
 | コミュニティフィードバック | [voice](https://github.com/Akari-OS/voice) | 🚧 |
 | **Akari Video** (独立アプリ、Phase 0 は維持のみ) | [video](https://github.com/Akari-OS/video) | 🚧 維持のみ (Phase 3 移植予定) |
 
