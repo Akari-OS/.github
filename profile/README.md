@@ -134,6 +134,21 @@ Module や独立アプリが増えるほど、同じ共有層を通じてエコ�
 | **[pool](https://github.com/Akari-OS/pool)** | Universal Knowledge Store。SQLite + FTS5 + Analyzer + MCP サーバー (11 ツール) + Obsidian 同期 |
 | **[m2c](https://github.com/Akari-OS/m2c)** | Media-to-Context プロトコル。メディアを構造化された AI コンテキストに変換 |
 | **[amp](https://github.com/Akari-OS/amp)** | Agent Memory Protocol。記憶の保存・検索・減衰を標準化 |
+| **[ace](https://github.com/Akari-OS/ace)** | Agent Context Engineering Framework。エージェントに渡すコンテキストの組み立て方と品質 Lint を標準化 |
+
+#### 📡 AKARI Protocol Suite
+
+Core 層は **4 つのプロトコル**で AI エージェント向け OS レベル標準を構成する。
+
+| プロトコル | 標準化対象 | リポ |
+|---|---|---|
+| **MCP**  | ツール呼び出し | (external) [modelcontextprotocol.io](https://modelcontextprotocol.io) |
+| **M2C**  | メディア → コンテキスト変換 | [m2c](https://github.com/Akari-OS/m2c) |
+| **AMP**  | エージェント記憶 | [amp](https://github.com/Akari-OS/amp) |
+| **ACE**  | エージェントコンテキスト + Lint | [ace](https://github.com/Akari-OS/ace) |
+
+> **AKARI Protocol Suite — The OS-level standards for AI agents.**
+> Tools / Memory / Media / Context — all standardized.
 
 ### 📱 Apps 層 — ユーザーが触る場所
 
@@ -195,6 +210,7 @@ Star / Issue / PR はどのリポにも大歓迎。
 - **pool**: Phase 6 完了（MCP 11 ツール + Obsidian 同期 + プリセット）— 最も進んでる旗艦リポ。次は Phase 7（Shell 統合）
 - **video**: Step 2 完了（CLI + GUI + MCP サーバー）
 - **m2c / amp**: v0.1〜0.2 Draft
+- **ace**: v0.1-draft 公開（2026-04-14）— Phase C 素振り中
 - **cloud**: Phase 4 完了（認証 / クレジット / マーケット）
 
 ---

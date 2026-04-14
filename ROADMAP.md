@@ -41,6 +41,7 @@ Phase 5: エコシステム拡張（サードパーティ Module 受け入れ）
 | Universal Knowledge Store 基盤 | [pool](https://github.com/Akari-OS/pool) | 🚧 Phase 6 完了・Phase 7 準備中 |
 | Media-to-Context プロトコル | [m2c](https://github.com/Akari-OS/m2c) | 🚧 v0.2 Draft |
 | Agent Memory Protocol | [amp](https://github.com/Akari-OS/amp) | 🚧 v0.1 Draft |
+| Agent Context Engineering Framework | [ace](https://github.com/Akari-OS/ace) | 🆕 v0.1-draft 公開 (2026-04-14) / Phase C 素振り中 |
 | クラウドバックエンド | [cloud](https://github.com/Akari-OS/cloud) | 🚧 Phase 4 完了 |
 | ランディングページ | [lp](https://github.com/Akari-OS/lp) | 🚧 |
 | コミュニティフィードバック | [voice](https://github.com/Akari-OS/voice) | 🚧 |

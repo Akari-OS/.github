@@ -256,6 +256,26 @@ Akari-OS は 1 つの巨大アプリではない。
 
 ---
 
+## AKARI Protocol Suite
+
+Akari-OS の共有層は **4 つのプロトコル**で AI エージェント向け OS レベルの標準を構成する。
+どれも「他クライアントからも同じ契約で叩ける」ことが前提。
+
+| プロトコル | 標準化対象 | リポ |
+|---|---|---|
+| **MCP**  | ツール呼び出し | (external) [modelcontextprotocol.io](https://modelcontextprotocol.io) |
+| **M2C**  | メディア → コンテキスト変換 | [`Akari-OS/m2c`](https://github.com/Akari-OS/m2c) |
+| **AMP**  | エージェント記憶 | [`Akari-OS/amp`](https://github.com/Akari-OS/amp) |
+| **ACE**  | エージェントコンテキスト + Lint | [`Akari-OS/ace`](https://github.com/Akari-OS/ace) |
+
+> **AKARI Protocol Suite — The OS-level standards for AI agents.**
+> Tools / Memory / Media / Context — all standardized.
+
+ACE は 2026-04-14 に v0.1-draft を公開。エージェントに渡すコンテキストの
+**組み立て方と品質 Lint** を標準化する、4 番目のプロトコル。
+
+---
+
 ## 2 つの使い方 — Agent 層は交換可能
 
 Akari-OS の共有層（Pool / AMP / M2C / Skill Manifest）はすべて **MCP サーバー**として露出している。
