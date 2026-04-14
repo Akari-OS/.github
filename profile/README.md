@@ -214,7 +214,7 @@ Star / Issue / PR はどのリポにも大歓迎。
 - 📖 **[Vision](https://github.com/Akari-OS/.github/blob/main/VISION.md)** — 構想・原則・7 エージェントの詳細
 - 🗺 **[Roadmap](https://github.com/Akari-OS/.github/blob/main/ROADMAP.md)** — 段階的ロードマップ
 - 🧠 **[Memory Architecture](https://github.com/Akari-OS/.github/blob/main/docs/memory.md)** — 記憶の 4 層モデル（Constitution / Pool / Memory / Working）
-- 🤝 **[Contributing](https://github.com/Akari-OS/.github/blob/main/CONTRIBUTING.md)** — 貢献方法・コーディング規約
+- 🤝 **[Contributing](https://github.com/Akari-OS/.github/blob/main/CONTRIBUTING.md)** — 貢献方法・コーディング規約（Issue / PR Template が整備されています）
 - 📜 **[Code of Conduct](https://github.com/Akari-OS/.github/blob/main/CODE_OF_CONDUCT.md)** — 行動規範
 - 🔒 **[Security Policy](https://github.com/Akari-OS/.github/blob/main/SECURITY.md)** — 脆弱性報告
 

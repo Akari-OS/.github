@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 GitHub Discussions
+    url: https://github.com/Akari-OS/.github/discussions
+    about: 大きな方向性・カジュアルな議論は Discussions へ / Discussions for general topics
+  - name: 📖 Documentation
+    url: https://github.com/Akari-OS
+    about: ドキュメントを参照 / Check the documentation first
+  - name: 🔒 Security
+    url: https://github.com/Akari-OS/.github/security/advisories/new
+    about: セキュリティ問題は GitHub Security Advisory で報告 / Report security issues privately

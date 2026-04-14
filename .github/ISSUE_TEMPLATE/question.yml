@@ -1,0 +1,22 @@
+name: ❓ Question
+description: 質問 / Ask a question
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 質問
+
+        💬 **カジュアルな議論は [Discussions](https://github.com/Akari-OS/.github/discussions) をご利用ください。**
+        **For casual discussion, please use [Discussions](https://github.com/Akari-OS/.github/discussions) instead.**
+  - type: input
+    id: repo
+    attributes:
+      label: 関連リポジトリ / Related Repository
+  - type: textarea
+    id: question
+    attributes:
+      label: 質問内容 / Question
+    validations:
+      required: true

@@ -25,6 +25,8 @@
 | `../CODE_OF_CONDUCT.md` | 行動規範 |
 | `../SECURITY.md` | セキュリティポリシー |
 | `../profile/README.md` | GitHub org プロフィール表示用 |
+| `../.github/ISSUE_TEMPLATE/` | Issue テンプレート（bug / feature / question + config） |
+| `../.github/PULL_REQUEST_TEMPLATE.md` | PR テンプレート |
 
 ---
 
