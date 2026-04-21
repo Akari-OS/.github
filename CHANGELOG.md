@@ -11,7 +11,7 @@
 - 7 agents redefined as "reference defaults" (swappable, not fixed)
 - Video First direction retired. AkariVideo is one of several official apps
 - MVP redefined: AKARI Core foundation itself (Writer is a reference implementation)
-- Module SDK with Tier system (Full / MCP-Declarative) announced
+- App SDK with Tier system (Full / MCP-Declarative) announced
 - CAA (Costume Agent Architecture) concept introduced
 - Edge-Native positioning clarified
 - Tagline updated: "AI っぽくない。あなたらしさを。" / "Not AI-ish. Yours."
@@ -28,7 +28,7 @@
 ## 2026-04-09 — Platform-First 転換
 
 - Phase 0 を Video First から Platform-First（Core 基盤 MVP）に転換
-- Shell + Module モデルの採用
+- Shell + App モデルの採用
 - Akari Video は Phase 3 で Shell アーキ上に移植する方針に変更
 
 ---

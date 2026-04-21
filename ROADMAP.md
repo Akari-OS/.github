@@ -14,11 +14,11 @@ Writer を同時に作っているのは「基盤が本当に動くかを検証�
 
 ```
 Phase 0 ─ Core 基盤 MVP + Tiny Writer（reference impl）    ← いまここ
-Phase 1 ─ MCP Hub + Home Module + オーケストレーション可視化
-Phase 2 ─ AKARI Writer 拡張 + 複数 Module 連携
+Phase 1 ─ MCP Hub + Home App + オーケストレーション可視化
+Phase 2 ─ AKARI Writer 拡張 + 複数 App 連携
 Phase 3 ─ Video を Shell アーキ上に移植
 Phase 4 ─ 自律化（夜間ジョブ + Memory 横断）
-Phase 5 ─ エコシステム拡張（Module SDK / サードパーティ受け入れ）
+Phase 5 ─ エコシステム拡張（App SDK / サードパーティ受け入れ）
 ```
 
 ---
@@ -35,7 +35,7 @@ Phase 5 ─ エコシステム拡張（Module SDK / サードパーティ受け�
 | **AKARI Shell** (Tauri + React) | 将来 `Akari-OS/shell` | ⬜ 設計完了、実装開始 |
 | **Agent Runtime**（Partner / Studio / Memory / Operator の 4 人最小構成） | 将来 `Akari-OS/agents` | ⬜ 設計中 |
 | **MCP クライアント基盤** | agents 内 | ⬜ |
-| **Tiny Writer Module** (140/280 字 X 投稿専用) | Shell 内 | ⬜ spec 完了 |
+| **Tiny Writer App** (140/280 字 X 投稿専用) | Shell 内 | ⬜ spec 完了 |
 | Universal Knowledge Store 基盤 | [pool](https://github.com/Akari-OS/pool) | 🚧 Phase 6 完了・Phase 7 準備中 |
 | Media-to-Context プロトコル | [m2c](https://github.com/Akari-OS/m2c) | 🚧 v0.2 Draft |
 | Agent Memory Protocol | [amp](https://github.com/Akari-OS/amp) | 🚧 v0.1 Draft |
@@ -46,25 +46,25 @@ Phase 5 ─ エコシステム拡張（Module SDK / サードパーティ受け�
 
 ---
 
-## Phase 1: MCP Hub + Home Module + オーケストレーション可視化
+## Phase 1: MCP Hub + Home App + オーケストレーション可視化
 
 > **目標**: ユーザーが自分で MCP サーバを追加でき、ダッシュボードで全体を俯瞰できるようにする。
 
-- [ ] **MCP Hub Module** — ユーザーが自分で MCP サーバを追加・管理
-- [ ] **Home Module** — 7 エージェントの状態・ジョブ・サマリの俯瞰
-- [ ] **Flow 可視化 Module**（最小版） — オーケストレーションの状態を "見える化"
+- [ ] **MCP Hub App** — ユーザーが自分で MCP サーバを追加・管理
+- [ ] **Home App** — 7 エージェントの状態・ジョブ・サマリの俯瞰
+- [ ] **Flow 可視化 App**（最小版） — オーケストレーションの状態を "見える化"
 - [ ] 他 SNS 対応（公式 MCP が出次第、Instagram / Threads / Bluesky 等）
-- [ ] Pool Browser Module / Memory Viewer Module（最小版）
+- [ ] Pool Browser App / Memory Viewer App（最小版）
 
 ---
 
-## Phase 2: AKARI Writer 拡張 + 複数 Module 連携
+## Phase 2: AKARI Writer 拡張 + 複数 App 連携
 
-> **目標**: Tiny Writer Module を AKARI Writer へ拡張し、複数 Module 間連携を成立させる。
+> **目標**: Tiny Writer App を AKARI Writer へ拡張し、複数 App 間連携を成立させる。
 
 - [ ] AKARI Writer — 長文・アウトライン・Pool 検索対応
-- [ ] Module 間ハンドオフ（Writer で書いた文章が Memory Viewer / Analyst に反映）
-- [ ] Analyst Reports Module
+- [ ] App 間ハンドオフ（Writer で書いた文章が Memory Viewer / Analyst に反映）
+- [ ] Analyst Reports App
 - [ ] Guardian の本格稼働（公開前チェック・ブランドガード）
 - [ ] Agent 追加（Studio 配下の専門エージェント）
 
@@ -86,7 +86,7 @@ Phase 5 ─ エコシステム拡張（Module SDK / サードパーティ受け�
 > **目標**: 寝てる間に仕事が進む状態を作る。
 
 - [ ] **Backstage Job System**（夜間自律実行）
-- [ ] Memory Store の Module 横断共有
+- [ ] Memory Store の App 横断共有
 - [ ] 承認フロー + 朝のブリーフィング
 - [ ] コンテキスト圧縮（ToMe / LLMLingua-2 / プロンプトキャッシュ 3 段ロケット）
 
@@ -94,9 +94,9 @@ Phase 5 ─ エコシステム拡張（Module SDK / サードパーティ受け�
 
 ## Phase 5: エコシステム拡張
 
-> **目標**: サードパーティが Module を寄与できる OS へ。
+> **目標**: サードパーティが App を寄与できる OS へ。
 
-- [ ] **Module SDK 正式リリース** — サードパーティが Module を書けるドキュメント + `akari-module-cli`
+- [ ] **App SDK 正式リリース** — サードパーティが App を書けるドキュメント + `akari-app-cli`
   - **Full Tier** / **MCP-Declarative Tier** の 2 Tier 制度（参入コストを大幅削減）
   - `akari.toml` manifest + 3 層 Certification（Lint / Contract Test / Manual Review）
 - [ ] **Panel Schema v1 安定化** — UI 定義スキーマの正式リリース
@@ -104,10 +104,10 @@ Phase 5 ─ エコシステム拡張（Module SDK / サードパーティ受け�
 - [ ] **Tiered Storage 本番化** — Hot / Warm / Cold + Storage Backend Adapter
   - ローカル / 外部 SSD / NAS / akari-cloud / Google Drive / S3 対応
   - 安い PC でも全素材ライブラリを扱える
-- [ ] **Declarative Capability Modules 拡充** — Publishing / Documents / Design / Asset Generation 等 11 カテゴリ参考実装
+- [ ] **Declarative Capability Apps 拡充** — Publishing / Documents / Design / Asset Generation 等 11 カテゴリ参考実装
   - Publishing（SNS: X / LINE / Note / Threads / Bluesky 等）
   - Documents（Microsoft 365 / Google Workspace / Notion / Airtable 等）
-- [ ] **Module マーケットプレイス** — 公式 / コミュニティ Module の配布・発見
+- [ ] **App マーケットプレイス** — 公式 / コミュニティ App の配布・発見
 - [ ] **Skill / テンプレート配布** — ユーザーが専門エージェントを共有できる
 - [ ] **AKARI Box / Station** — 軽量推論デバイス / GPU 推論サーバーのハードウェア検討
 
@@ -134,5 +134,5 @@ Phase 5 ─ エコシステム拡張（Module SDK / サードパーティ受け�
 
 - Pool の Analyzer プラグイン（Video / Audio / PDF / Code 等）
 - M2C / AMP プロトコル仕様への feedback
-- Module SDK の設計提案
+- App SDK の設計提案
 - ドキュメント・翻訳の改善
