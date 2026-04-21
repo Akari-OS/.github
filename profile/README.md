@@ -128,7 +128,7 @@ Early development — 主要リポは Phase 開発中。Star / Issue / PR はど
 
 ## ドキュメント
 
-- 📖 **[Vision](https://github.com/Akari-OS/.github/blob/main/VISION.md)** — 構想・原則・iOS 比喩・5 層アーキ・Module SDK
+- 📖 **[Vision](https://github.com/Akari-OS/.github/blob/main/VISION.md)** — 構想・原則・iOS 比喩・5 層アーキ・App SDK
 - 🗺 **[Roadmap](https://github.com/Akari-OS/.github/blob/main/ROADMAP.md)** — Phase 0-5 の段階的ロードマップ
 - 🧠 **[Memory Architecture](https://github.com/Akari-OS/.github/blob/main/docs/memory.md)** — 記憶の 4 層モデル
 - 🤝 **[Contributing](https://github.com/Akari-OS/.github/blob/main/CONTRIBUTING.md)** — 貢献方法・コーディング規約

@@ -99,7 +99,7 @@ AKARI の作業は、3 つのフェーズが往復するループで進む。
 │   Memory Viewer / Analyst Reports / …        │
 │   （公式 + サードパーティ共存）                │
 ├─────────────────────────────────────────────┤
-│          ↕ AKARI Module SDK                   │
+│          ↕ AKARI App SDK                      │
 ├─────────────────────────────────────────────┤
 │ AKARI Core（基盤） ← **MVP はここ**           │
 │  ・器（Shell）                                 │
@@ -184,13 +184,13 @@ AkariVideo / AkariWriter は「公式アプリの 1 つ」であって、サー�
 
 ---
 
-## AKARI Module SDK
+## AKARI App SDK
 
 iOS における **UIKit + Human Interface Guidelines** に相当する、アプリ開発者向けの契約。
 
-公式 Module（Writer / Video / SNS Sender）と**完全に同じ SDK**で、誰でも Module が作れる。
+公式アプリ（Writer / Video / SNS Sender）と**完全に同じ SDK**で、誰でも App が作れる。
 
-### Module Tier — 参入コストを選べる
+### App Tier — 参入コストを選べる
 
 | Tier | 概要 | 対象 |
 |---|---|---|
@@ -199,19 +199,19 @@ iOS における **UIKit + Human Interface Guidelines** に相当する、アプ
 
 MCP-Declarative Tier により、SDK の参入コストを大幅に下げる設計。
 
-### サードパーティ Module 共存
+### サードパーティ App 共存
 
 ```
 # 雛形生成
-npx akari-module-cli create my-writer-plus
+npx akari-app-cli create my-writer-plus
 
 # 検証
-akari module certify
+akari app certify
 
 # 配布（3 通り）
-akari module publish           # 公式マーケット（Review 必須）
-npm publish @user/my-module    # 自己配布
-git + akari module add <url>   # 直接インストール
+akari app publish           # 公式マーケット（Review 必須）
+npm publish @user/my-app    # 自己配布
+git + akari app add <url>   # 直接インストール
 ```
 
 ---
