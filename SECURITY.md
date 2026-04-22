@@ -14,8 +14,9 @@ Akari-OS コミュニティはセキュリティを真剣に受け止めてい�
 
 ### 報告チャネル
 
-**優先**: [GitHub Security Advisory](https://github.com/Akari-OS) の該当リポジトリで
-「Report a vulnerability」を使う。GitHub 上で暗号化された報告が送れて、追跡もしやすい。
+**優先**: 該当リポジトリの Security タブ →「Report a vulnerability」を使う。
+GitHub 上で暗号化された報告が送れて、追跡もしやすい。
+（例: `https://github.com/Akari-OS/<repo>/security/advisories/new`）
 
 **代替**: メールで報告 → info@kyo-kobo.com
 
