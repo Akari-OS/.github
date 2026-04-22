@@ -21,6 +21,11 @@
 - `(former personal org)/m2c-protocol` (正典は `Akari-OS/m2c`)
 - `(former personal org)/memu-v3-mcp` (ecosystem 外)
 
+### Breaking Changes
+
+- **M2C schema URI 変更**: `m2c-protocol.org/schemas/...` → `github.com/Akari-OS/m2c/schema/v0.2/...`
+  外部 validator を旧 URI に pin している実装は参照先を更新すること。
+
 Hub SOP: see private `akari-os` repository's `docs/governance/`.
 
 ---
