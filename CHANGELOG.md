@@ -7,19 +7,19 @@
 ## 2026-04-22 — Governance & Visibility Overhaul
 
 ### Added
-- **Ownership unification**: all AKARI code consolidated under `Akari-OS` org. Personal account (`ryoma-nakajima/*`) no longer used.
+- **Ownership unification**: all AKARI code consolidated under `Akari-OS` org. Former personal org repos migrated.
 - **Visibility 3-tier policy**: 永続 public (protocol specs + SDK) / 永続 private (strategy/credentials) / 段階公開 (implementation repos)
 - **Governance SOPs**: `publish-workflow.md`, `new-public-repo-checklist.md`, `visibility-policy.md`
 - `voice` and `lp` designated as permanent private (competitive copy/UX protection)
 
 ### Changed
-- Repo renames: `ryoma-nakajima/akari-os` → `Akari-OS/hub`, `ryoma-nakajima/akari-pool` → `Akari-OS/pool-impl` (public docs: `Akari-OS/pool`)
+- Repo renames: `(former personal org)/akari-os` → `Akari-OS/hub`, `(former personal org)/akari-pool` → `Akari-OS/pool-impl` (public docs: `Akari-OS/pool`)
 - `akari-cloud` / `akari-lp` moved to `Akari-OS` (private)
 
 ### Archived
-- `ryoma-nakajima/agent-memory-protocol` (正典は `Akari-OS/amp`)
-- `ryoma-nakajima/m2c-protocol` (正典は `Akari-OS/m2c`)
-- `ryoma-nakajima/memu-v3-mcp` (ecosystem 外)
+- `(former personal org)/agent-memory-protocol` (正典は `Akari-OS/amp`)
+- `(former personal org)/m2c-protocol` (正典は `Akari-OS/m2c`)
+- `(former personal org)/memu-v3-mcp` (ecosystem 外)
 
 Hub SOP: see private `akari-os` repository's `docs/governance/`.
 
