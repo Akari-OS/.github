@@ -106,13 +106,13 @@ Pool のコンテキストとして保存できるようにした。
 - **過度な抽象化を避ける** — 1 回しか使わないヘルパーは作らない
 - **不要なコードは完全に削除**（コメントアウトで残さない）
 
-### TypeScript (video / cloud / lp / voice)
+### TypeScript (public apps)
 
 - ESLint + Prettier に従う
 - 型を明示する（`any` は原則禁止）
 - React コンポーネントは関数コンポーネント + Hooks
 
-### Rust (pool / video の Rust 側)
+### Rust (pool / select apps)
 
 - `cargo fmt` + `cargo clippy` に従う
 - エラーは `thiserror` で型定義、`anyhow` は CLI / 統合層のみ

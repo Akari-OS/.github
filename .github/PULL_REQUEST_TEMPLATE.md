@@ -21,9 +21,7 @@
 - Phase: 
 - Repo: 
 
-## spec-id (該当する場合)
-
-<!-- 例: AKARI-HUB-014 / AKARI-POOL-001 -->
+## spec-id (if applicable, see internal docs)
 
 ## テスト / Testing
 
