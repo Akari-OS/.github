@@ -47,7 +47,7 @@ jobs:
 
 ## 設計
 
-詳細は [`PJ26c21_AkariOS/docs/sdd/guardrails.md`](https://github.com/Akari-OS) を参照（非公開ハブ）。
+詳細は [`akari-os/docs/sdd/guardrails.md`](https://github.com/Akari-OS) を参照（非公開ハブ）。
 
 ## バージョニング
 
