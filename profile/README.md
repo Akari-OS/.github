@@ -89,10 +89,11 @@ AI が得意なこと（大量処理・解析）は AI に。
 
 | Repository | 内容 |
 |---|---|
-| **[pool](https://github.com/Akari-OS/pool)** | Universal Knowledge Store。SQLite + FTS5 + Analyzer + MCP サーバー |
+| **[pool](https://github.com/Akari-OS/pool)** | Universal Knowledge Store（公開ドキュメント）。SQLite + FTS5 + Analyzer + MCP サーバー |
 | **[m2c](https://github.com/Akari-OS/m2c)** | Media-to-Context プロトコル。メディアを構造化された AI コンテキストに変換 |
 | **[amp](https://github.com/Akari-OS/amp)** | Agent Memory Protocol。記憶の保存・検索・減衰を標準化 |
 | **[ace](https://github.com/Akari-OS/ace)** | Agent Context Engineering Framework。コンテキストの組み立て方と品質 Lint を標準化 |
+| **[sdk](https://github.com/Akari-OS/sdk)** | AKARI App SDK monorepo。Full Tier / MCP-Declarative Tier 2 つの App 開発モデル |
 
 #### AKARI Protocol Suite
 
@@ -103,14 +104,28 @@ AI が得意なこと（大量処理・解析）は AI に。
 | **AMP** | エージェント記憶 | [amp](https://github.com/Akari-OS/amp) |
 | **ACE** | エージェントコンテキスト + Lint | [ace](https://github.com/Akari-OS/ace) |
 
-### Apps 層 — ユーザーが触る場所
+### Apps 層 — 公開済みサイト
 
-| Repository | 内容 |
-|---|---|
-| **[video](https://github.com/Akari-OS/video)** | Akari Video — デスクトップ動画編集（Tauri + Rust + React）|
-| **[cloud](https://github.com/Akari-OS/cloud)** | Akari Cloud — 認証・クレジット・マーケットのバックエンド |
-| **[voice](https://github.com/Akari-OS/voice)** | コミュニティフィードバック + チェンジログ |
-| **[lp](https://github.com/Akari-OS/lp)** | ホームページ (akari-oss.app) |
+| App | 配信先 | ソース |
+|---|---|---|
+| **Home page** | [akari-oss.app](https://akari-oss.app) | [lp](https://github.com/Akari-OS/lp) |
+| **Voice**（フィードバック + チェンジログ） | [voice.akari-oss.app](https://voice.akari-oss.app) | [voice](https://github.com/Akari-OS/voice) |
+
+### Preview / 開発中（private）
+
+Akari-OS org 配下で preview として開発中。stable 到達次第 public 化予定:
+
+- **`shell`** — Tauri v2 + React ホスト（Phase 0 実装中）
+- **`agents`** — 7 Reference Agents daemon（Node.js + TypeScript）
+- **`pool-impl`** — Pool 実装（Rust + SQLite + MCP）、v1.0 到達で公開候補
+
+永続非公開（credentials を扱うため公開しない）:
+
+- **`cloud`** — 認証・クレジット・マーケットのバックエンド
+
+計画中（未着手）:
+
+- **`video`** — デスクトップ動画編集（Phase 3 で Shell 統合予定）
 
 ---
 
@@ -119,10 +134,12 @@ AI が得意なこと（大量処理・解析）は AI に。
 Early development — 主要リポは Phase 開発中。Star / Issue / PR はどのリポにも大歓迎。
 
 - **pool**: Phase 6 完了（MCP 11 ツール + Obsidian 同期）— 次は Phase 7（Shell 統合）
-- **video**: Step 2 完了（CLI + GUI + MCP サーバー）
+- **shell**: Phase 0 実装中（Tauri v2 + React）
+- **agents**: preview 段階、7 Reference Agents daemon 設計・初期実装
 - **m2c / amp**: v0.1〜0.2 Draft
 - **ace**: v0.1-draft 公開（2026-04-14）
-- **cloud**: Phase 4 完了
+- **sdk**: monorepo 整備中（Module → App リネーム完了）
+- **cloud**: Phase 4 完了（永続 private）
 
 ---
 

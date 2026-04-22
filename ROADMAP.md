@@ -32,17 +32,19 @@ Phase 5 ─ エコシステム拡張（App SDK / サードパーティ受け入�
 
 | 項目 | リポジトリ | 状態 |
 |---|---|:-:|
-| **AKARI Shell** (Tauri + React) | 将来 `Akari-OS/shell` | ⬜ 設計完了、実装開始 |
-| **Agent Runtime**（Partner / Studio / Memory / Operator の 4 人最小構成） | 将来 `Akari-OS/agents` | ⬜ 設計中 |
-| **MCP クライアント基盤** | agents 内 | ⬜ |
+| **AKARI Shell** (Tauri + React) | `Akari-OS/shell` (private preview) | 🔄 Phase 0 実装中 |
+| **Agent Runtime**（Partner / Studio / Memory / Operator の 4 人最小構成） | `Akari-OS/agents` (private preview) | 🔄 初期実装 |
+| **MCP クライアント基盤** | agents 内 | 🔄 |
 | **Tiny Writer App** (140/280 字 X 投稿専用) | Shell 内 | ⬜ spec 完了 |
-| Universal Knowledge Store 基盤 | [pool](https://github.com/Akari-OS/pool) | 🚧 Phase 6 完了・Phase 7 準備中 |
+| Universal Knowledge Store 基盤 | [pool](https://github.com/Akari-OS/pool) (docs) / `pool-impl` (private) | 🚧 Phase 6 完了・Phase 7 準備中 |
 | Media-to-Context プロトコル | [m2c](https://github.com/Akari-OS/m2c) | 🚧 v0.2 Draft |
-| Agent Memory Protocol | [amp](https://github.com/Akari-OS/amp) | 🚧 v0.1 Draft |
+| Agent Memory Protocol | [amp](https://github.com/Akari-OS/amp) | 🚧 v0.1 公開済・v0.2 Draft |
 | Agent Context Engineering Framework | [ace](https://github.com/Akari-OS/ace) | 🆕 v0.1-draft 公開 (2026-04-14) |
-| クラウドバックエンド | [cloud](https://github.com/Akari-OS/cloud) | 🚧 Phase 4 完了 |
+| AKARI App SDK | [sdk](https://github.com/Akari-OS/sdk) | 🚧 monorepo 整備中 |
+| クラウドバックエンド | `Akari-OS/cloud` (永続 private) | 🚧 Phase 4 完了 |
 | ホームページ | [lp](https://github.com/Akari-OS/lp) | 🚧 |
-| **Akari Video**（独立アプリ、Phase 0 は維持のみ） | [video](https://github.com/Akari-OS/video) | 🚧 維持のみ（Phase 3 移植予定） |
+| コミュニティフィードバック | [voice](https://github.com/Akari-OS/voice) | ✅ [voice.akari-oss.app](https://voice.akari-oss.app) 稼働中 |
+| **Akari Video**（独立アプリ、Phase 0 は維持のみ） | 計画中 | ⬜ Phase 3 移植予定 |
 
 ---
 
