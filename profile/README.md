@@ -106,22 +106,20 @@ AI が得意なこと（大量処理・解析）は AI に。
 
 ### Apps 層 — 公開済みサイト
 
-| App | 配信先 | ソース |
-|---|---|---|
-| **Home page** | [akari-oss.app](https://akari-oss.app) | [lp](https://github.com/Akari-OS/lp) |
-| **Voice**（フィードバック + チェンジログ） | [voice.akari-oss.app](https://voice.akari-oss.app) | [voice](https://github.com/Akari-OS/voice) |
+| App | 配信先 |
+|---|---|
+| **Home page** | [akari-oss.app](https://akari-oss.app) |
+| **Voice**（フィードバック + チェンジログ） | [voice.akari-oss.app](https://voice.akari-oss.app) |
 
-### Preview / 開発中（private）
+> サイトは公開、ソースコードは非公開。
+
+### Preview / 開発中（非公開）
 
 Akari-OS org 配下で preview として開発中。stable 到達次第 public 化予定:
 
 - **`shell`** — Tauri v2 + React ホスト（Phase 0 実装中）
 - **`agents`** — 7 Reference Agents daemon（Node.js + TypeScript）
 - **`pool-impl`** — Pool 実装（Rust + SQLite + MCP）、v1.0 到達で公開候補
-
-永続非公開（credentials を扱うため公開しない）:
-
-- **`cloud`** — 認証・クレジット・マーケットのバックエンド
 
 計画中（未着手）:
 
