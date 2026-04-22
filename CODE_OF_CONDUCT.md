@@ -59,7 +59,7 @@ Issue、その他の貢献を削除、編集、拒否する権利と責任を持
 報告できる。連絡先:
 
 - **メール**: info@kyo-kobo.com
-- **GitHub**: [@ryoma-nakajima](https://github.com/ryoma-nakajima)
+- **GitHub**: open an issue in [Akari-OS/.github](https://github.com/Akari-OS/.github/issues)
 
 すべての苦情は迅速かつ公平にレビューおよび調査される。
 

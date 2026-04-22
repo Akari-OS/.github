@@ -4,7 +4,7 @@
 > **扱う範囲**: 公開向けメタドキュメント、org プロフィール README、公開ビジョン・ロードマップ
 > **扱わない範囲**: 非公開戦略（GTM / 競合 / OSS 防衛 / 価格）（→ Hub `akari-os/docs/strategy/`）、実装詳細（→ 各アプリリポ）
 >
-> - 🌐 正典: [Akari-OS](https://github.com/Akari-OS)
+> - 🌐 正典: [Akari-OS/.github](https://github.com/Akari-OS)
 > - 🏛 Hub（非公開）: `akari-os` — 横断研究・戦略・Master Index
 > - 🗺 全リポマップ: `akari-os/MAP.md`
 

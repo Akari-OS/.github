@@ -137,7 +137,6 @@ Early development — 主要リポは Phase 開発中。Star / Issue / PR はど
 - **m2c / amp**: v0.1〜0.2 Draft
 - **ace**: v0.1-draft 公開（2026-04-14）
 - **sdk**: monorepo 整備中（Module → App リネーム完了）
-- **cloud**: Phase 4 完了（永続 private）
 
 ---
 
@@ -179,4 +178,4 @@ Akari-OS は個人開発の OSS プロジェクト。
 
 ---
 
-*Built by [@ryoma-nakajima](https://github.com/ryoma-nakajima) and a growing community.*
+*Built by the Akari-OS community.*
