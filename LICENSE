@@ -1,0 +1,43 @@
+Creative Commons Attribution 4.0 International License
+
+Copyright (c) 2025-2026 Akari-OS contributors
+
+This repository contains documentation and organization-level canonical
+content for the Akari-OS ecosystem (VISION, ROADMAP, CODE_OF_CONDUCT,
+SECURITY, CONTRIBUTING, CHANGELOG, and the public GitHub organization
+profile). It does not contain source code; each application's source
+is licensed separately in its own repository.
+
+You are free to:
+
+  * Share — copy and redistribute the material in any medium or format
+  * Adapt — remix, transform, and build upon the material for any
+    purpose, even commercially.
+
+Under the following terms:
+
+  * Attribution — You must give appropriate credit, provide a link to
+    the license, and indicate if changes were made. You may do so in
+    any reasonable manner, but not in any way that suggests the
+    licensor endorses you or your use.
+
+  * No additional restrictions — You may not apply legal terms or
+    technological measures that legally restrict others from doing
+    anything the license permits.
+
+Full legal text:
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Human-readable summary:
+https://creativecommons.org/licenses/by/4.0/
+
+Note on scope
+-------------
+
+- This CC-BY-4.0 license covers the documentation in this repository.
+- Each sibling repository under the `Akari-OS` GitHub organization
+  carries its own license file (AGPL-3.0, Apache-2.0, MIT, etc.);
+  this license does not override those per-repo terms.
+- Logos, banners, and trademark-like marks (e.g. `banner.svg`) are
+  subject to the trademark policy documented in the relevant
+  repositories (see e.g. `akari-ace/TRADEMARKS.md`).
