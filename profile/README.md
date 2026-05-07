@@ -160,6 +160,22 @@ Early development — 主要リポは Phase 開発中。Star / Issue / PR はど
 
 ---
 
+## License
+
+Akari-OS は **Open Core モデル**で開発されている。**自分の PC で動かすコードはすべて OSS** — 自由に self-host・fork・改変可能。収益はクラウドホスティングと素材ライブラリ（subscription）で取る。ベンダーロックイン無し。
+
+| Layer | License | 対象リポ |
+|---|---|---|
+| 基盤コード | **Apache 2.0** | `shell` / `pool-impl` / `agents` |
+| プロトコル仕様 | **Apache 2.0** | `m2c` / `amp` / `ace` |
+| SDK + Full Tier apps | **MIT** | `sdk` / `design` / `writer` / `video` / `voice` |
+| ドキュメント | **CC BY 4.0** | `pool` (docs) / `.github`（本リポ） |
+| 商用ホスティング・素材 | proprietary | `cloud` / `lp` / `materials` |
+
+「Akari」「AKARI OS」は商標として保護される予定。コードは fork 自由だが、ブランド名の流用は別途同意が必要。
+
+---
+
 ## プロジェクトを応援する
 
 Akari-OS は個人開発の OSS プロジェクト。
