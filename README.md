@@ -62,7 +62,7 @@ Akari-OS org 全体のリポジトリ一覧とカテゴリ分類は [`profile/RE
 
 ## ライセンス
 
-このリポジトリのドキュメントは [`LICENSE`](./LICENSE)（Creative Commons Attribution 4.0 International）で配布されます。各兄弟リポジトリのソースコードはそれぞれ独自のライセンス（AGPL-3.0 / Apache-2.0 / MIT 等）で配布されます。
+このリポジトリのドキュメントは [`LICENSE`](./LICENSE)（Creative Commons Attribution 4.0 International）で配布されます。各兄弟リポジトリのソースコードは Open Core 4 層モデル（Apache 2.0 / MIT / CC BY 4.0 / proprietary）に従い、それぞれ独自のライセンスで配布されます。詳細は [`profile/README.md`](./profile/README.md) の License 節を参照。
 
 ---
 

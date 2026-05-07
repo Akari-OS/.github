@@ -129,10 +129,9 @@ Akari-OS org 配下で preview として開発中。stable 到達次第 public �
 - **`shell`** — Tauri v2 + React ホスト（Phase 0 実装中）
 - **`agents`** — 7 Reference Agents daemon（Node.js + TypeScript）
 - **`pool-impl`** — Pool 実装（Rust + SQLite + MCP）、v1.0 到達で公開候補
-
-計画中（未着手）:
-
-- **`video`** — デスクトップ動画編集（Phase 3 で Shell 統合予定）
+- **`design`** — Canva ライク汎用デザインアプリ（Phase 0/1.0/1.5/1.9/2/3 完了、Phase 4 進行中）
+- **`writer`** — 公式テキストエディタ（Phase 1 完了、Phase 2 Publishing 連携進行中）
+- **`video`** — デスクトップ動画編集（Phase 0/1/2 完了、Phase 3 字幕 / Effect / Audio / Transition 進行中）
 
 ---
 
@@ -140,7 +139,7 @@ Akari-OS org 配下で preview として開発中。stable 到達次第 public �
 
 Early development — 主要リポは Phase 開発中。Star / Issue / PR はどのリポにも大歓迎。
 
-- **pool**: Phase 6 完了（MCP 11 ツール + Obsidian 同期）— 次は Phase 7（Shell 統合）
+- **pool**: Phase 6 完了（MCP **34 ツール** + Obsidian 同期）— 次は Phase 7（Shell 統合）
 - **shell**: Phase 0 実装中（Tauri v2 + React）
 - **agents**: preview 段階、7 Reference Agents daemon 設計・初期実装
 - **m2c / amp**: v0.1〜0.2 Draft

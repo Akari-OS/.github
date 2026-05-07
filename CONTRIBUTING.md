@@ -133,10 +133,13 @@ Pool のコンテキストとして保存できるようにした。
 
 ## ライセンスと著作権
 
-貢献するコードは、各リポジトリのライセンスで公開される：
+貢献するコードは、各リポジトリのライセンス（Open Core 4 層モデル）で公開される：
 
-- **pool**: AGPL-3.0
-- **m2c / amp**: Apache-2.0
+- **基盤コード** (`shell` / `pool-impl` / `agents`): **Apache 2.0**
+- **プロトコル仕様** (`m2c` / `amp` / `ace`): **Apache 2.0**
+- **SDK + Full Tier apps** (`sdk` / `design` / `writer` / `video` / `voice`): **MIT**
+- **公開ドキュメント** (`pool` (docs) / `.github`): **CC BY 4.0**
+- **収益層** (`cloud` / `lp` / `materials`): **proprietary**（外部 contribution 不可）
 - **その他**: 各リポジトリ参照
 
 PR を送ることは、そのライセンスでの公開に同意したとみなす（CLA なし、DCO なし、シンプルに）。
