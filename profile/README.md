@@ -83,6 +83,23 @@ AI が得意なこと（大量処理・解析）は AI に。
 
 ---
 
+## 🚀 Get Started — はじめての方へ
+
+AKARI を初めて触る方向けの導線:
+
+| あなたは | 所要時間 | リンク |
+|---|---|---|
+| 5 分で AKARI を知りたい | 5 分 | [`docs/onboarding/quickstart-visitor.md`](../docs/onboarding/quickstart-visitor.md) |
+| 30 分で最初の Work を作りたい（個人クリエイター） | 30 分 | [`docs/onboarding/quickstart-end-user.md`](../docs/onboarding/quickstart-end-user.md) |
+| 1 日で contribute / app を作りたい（開発者） | 1 日 | [`docs/onboarding/quickstart-developer.md`](../docs/onboarding/quickstart-developer.md) |
+
+共通読み物:
+- 全体像: [`docs/onboarding/concept-map.md`](../docs/onboarding/concept-map.md)
+- 用語集: [`docs/onboarding/glossary.md`](../docs/onboarding/glossary.md)
+- FAQ: [`docs/onboarding/faq.md`](../docs/onboarding/faq.md)
+
+---
+
 ## リポジトリ一覧
 
 > **リポタイプ凡例**: 公開リポの README 冒頭にはリポの性格を示すアイコンが付いている。
