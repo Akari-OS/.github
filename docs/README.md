@@ -16,6 +16,12 @@
 |---|---|
 | [memory.md](./memory.md) | org プロフィール運用メモ・公開判断の記録 |
 
+### Governance
+
+| ファイル | 内容 |
+|---|---|
+| [governance/ai-pricing.md](./governance/ai-pricing.md) | AKARI Cloud AI クレジット透明料金体系 |
+
 ### ルート直下（公開正典）
 
 | ファイル | 内容 |
