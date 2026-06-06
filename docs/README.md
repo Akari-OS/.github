@@ -16,6 +16,12 @@
 |---|---|
 | [memory.md](./memory.md) | org プロフィール運用メモ・公開判断の記録 |
 
+### Guides（使い方ガイド）
+
+| ファイル | 内容 |
+|---|---|
+| [guides/connect-ai-to-akari-video.md](./guides/connect-ai-to-akari-video.md) | AKARI Video を AI（Codex / Claude）で操作する — MCP 接続の初心者向けガイド |
+
 ### Governance
 
 | ファイル | 内容 |
