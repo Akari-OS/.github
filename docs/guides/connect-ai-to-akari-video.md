@@ -1,3 +1,8 @@
+<!--
+派生ドキュメント（公開・self-contained 版）。正典は akari-video リポの
+docs/connect-ai-codex-claude.md。内容修正は正典で行い、ここへ反映すること。
+-->
+
 # AKARI Video を AI（Codex / Claude）で操作する — はじめてガイド
 
 AKARI Video は、**Codex や Claude のような AI から動画編集を直接操作**できます。
