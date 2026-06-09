@@ -20,7 +20,7 @@
 
 | ファイル | 内容 |
 |---|---|
-| [guides/connect-ai-to-akari-video.md](./guides/connect-ai-to-akari-video.md) | AKARI Video を AI（Codex / Claude）で操作する — MCP 接続の初心者向けガイド |
+| [guides/connect-ai-to-akari.md](./guides/connect-ai-to-akari.md) | AKARI を AI（Codex / Claude）で操作する — 全アプリ + アプリ切替の MCP 接続ガイド |
 
 ### Governance
 
