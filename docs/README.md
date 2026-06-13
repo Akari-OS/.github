@@ -16,6 +16,12 @@
 |---|---|
 | [memory.md](./memory.md) | org プロフィール運用メモ・公開判断の記録 |
 
+### Onboarding（新規ユーザー導線）
+
+| ファイル | 内容 |
+|---|---|
+| [onboarding/INDEX.md](./onboarding/INDEX.md) | AKARI を初めて触る人向けの入口（visitor / end-user / developer の 3 段階 Quickstart + 用語集・FAQ） |
+
 ### Guides（使い方ガイド）
 
 | ファイル | 内容 |

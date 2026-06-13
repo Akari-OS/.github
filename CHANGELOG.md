@@ -4,6 +4,54 @@
 
 ---
 
+## 2026-06-10 — AI 接続ガイド エコシステム版更新
+
+### Changed
+- **connect-ai-to-akari.md** を全アプリ対応（Video / SVG / Sheets / Stage / Design / 3D）エコシステム版に更新。旧: `mcp-connect-akari-video.md`
+
+---
+
+## 2026-06-06 — AKARI Video MCP 接続ガイド公開
+
+### Added
+- **docs/guides/connect-ai-to-akari.md**（初版 `mcp-connect-akari-video.md`）: Codex / Claude から AKARI Video を MCP 経由で操作するガイドを追加
+
+---
+
+## 2026-05-08 — AI Pricing 公開 v0.2.0 / Onboarding 公開
+
+### Added
+- **docs/governance/ai-pricing.md** v0.2.0 公開: USD 統一 / クーポンコード制 / SLA 観測ポリシーを含む透明料金体系ドキュメントを公開（Hub `akari-cloud/docs/governance/ai-pricing.md` からフィルタ済み公開版として切り出し）
+- **docs/onboarding/** 7 ファイル公開: `INDEX.md` / `concept-map.md` / `glossary.md` / `faq.md` / `quickstart-visitor.md` / `quickstart-end-user.md` / `quickstart-developer.md`
+- **profile/README.md** に「Get Started」セクションを追加（onboarding への導線）
+
+### Changed
+- AGPL 表記除去 / Phase 状態を 2026-05-08 時点に同期
+
+---
+
+## 2026-05-07 — License 節追加
+
+### Added
+- **profile/README.md** に License 節（Open Core 4 層モデル）を追加
+
+---
+
+## 2026-04-26 — profile README リポタイプ凡例追加
+
+### Added
+- **profile/README.md** にリポタイプ凡例（Specification / SDK / Documentation / Org Profile）を追加
+
+---
+
+## 2026-04-24 — Phase 2 必須ファイル追加
+
+### Added
+- `LICENSE`（CC BY 4.0）追加
+- ルート `README.md` 追加（リポ構造・更新フロー説明）
+
+---
+
 ## 2026-04-22 — Governance & Visibility Overhaul
 
 ### Added

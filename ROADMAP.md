@@ -13,13 +13,19 @@ Writer を同時に作っているのは「基盤が本当に動くかを検証�
 基盤が固まれば、同じ契約で Video も SNS Sender も動く。
 
 ```
-Phase 0 ─ Core 基盤 MVP + Tiny Writer（reference impl）    ← いまここ
-Phase 1 ─ MCP Hub + Home App + オーケストレーション可視化
+Phase 0 ─ Core 基盤 MVP + Tiny Writer（reference impl）
+Phase 1 ─ MCP Hub + Home App + オーケストレーション可視化    ← Core 基盤：いまここ
 Phase 2 ─ AKARI Writer 拡張 + 複数 App 連携
 Phase 3 ─ Video を Shell アーキ上に移植
 Phase 4 ─ 自律化（夜間ジョブ + Memory 横断）
 Phase 5 ─ エコシステム拡張（App SDK / サードパーティ受け入れ）
 ```
+
+> **各アプリの進捗**: アプリ自体のフェーズは OS フェーズとは独立して進む。
+> video — Phase 3（字幕 / Effect / Audio / Transition）進行中 |
+> design — Phase 4 進行中 |
+> writer — Phase 2 Publishing 連携進行中
+> 詳細は `profile/README.md` の Preview / 開発中 セクションを参照。
 
 ---
 
@@ -44,7 +50,8 @@ Phase 5 ─ エコシステム拡張（App SDK / サードパーティ受け入�
 | クラウドバックエンド | 非公開リポ | 🚧 Phase 4 完了 |
 | ホームページ | 非公開リポ | 🚧 [akari-oss.app](https://akari-oss.app) |
 | コミュニティフィードバック | 非公開リポ | ✅ [voice.akari-oss.app](https://voice.akari-oss.app) 稼働中 |
-| **Akari Video**（独立アプリ、Phase 0 は維持のみ） | 計画中 | ⬜ Phase 3 移植予定 |
+| **Akari Video**（独立アプリ） | `video` (private preview) | 🔄 Phase 3 字幕 / Effect / Audio / Transition 進行中 |
+| **Akari Design**（独立アプリ） | `design` (private preview) | 🔄 アプリ内 Phase 4 進行中（Phase 0/1.0/1.5/1.9/2/3 完了） |
 
 ---
 
@@ -72,9 +79,10 @@ Phase 5 ─ エコシステム拡張（App SDK / サードパーティ受け入�
 
 ---
 
-## Phase 3: Akari Video を Shell アーキ上に移植
+## Phase 3: Akari Video を Shell アーキ上に移植（進行中）
 
 > **目標**: 既存の Akari Video 資産を Phase 0-2 で固まった Shell + Agent アーキの上に載せる。
+> **アプリ状況**: `video` は既に Phase 3（字幕 / Effect / Audio / Transition）が進行中。OS 側 Phase 3 との統合を進める。
 
 - [ ] Akari Video (new arch) — 独立アプリのまま、Agent Runtime / Pool / AMP を共有
 - [ ] Video → Writer 連携（動画のシーン要約 → 記事 / SNS 投稿に派生）

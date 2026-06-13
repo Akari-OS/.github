@@ -2,7 +2,7 @@
 title: "AKARI Cloud AI Pricing — 透明料金体系"
 status: published
 last_synced_from: akari-cloud/docs/governance/ai-pricing.md
-last_synced_date: 2026-05-09
+last_synced_date: 2026-06-13
 ---
 
 # AKARI Cloud AI Pricing
@@ -102,9 +102,9 @@ OpenRouter が提供するモデルについて、AKARI Cloud の価格設定を
 
 | モデル | Provider | Input<br/>（$/1M tok） | Output<br/>（$/1M tok） | Tier | Apps |
 |---|---|---|---|---|---|
-| Claude Opus | Anthropic | 15.00 | 75.00 | premium | writer / design / video |
-| Claude Sonnet | Anthropic | 3.00 | 15.00 | premium | writer / video |
-| Claude Haiku | Anthropic | 0.80 | 4.00 | standard | all |
+| `anthropic/claude-opus-4` | Anthropic | 15.00 | 75.00 | premium | writer / design / video |
+| `anthropic/claude-sonnet-4-6` | Anthropic | 3.00 | 15.00 | premium | writer / video |
+| `anthropic/claude-haiku-4-5` | Anthropic | 0.80 | 4.00 | standard | all |
 | Gemini Flash | Google | 0.10 | 0.40 | standard | all |
 | GPT-4o | OpenAI | 2.50 | 10.00 | premium | all |
 | GPT-4o Mini | OpenAI | 0.15 | 0.60 | standard | all |
@@ -131,7 +131,7 @@ AKARI エコシステムは 3 つの AI 経路を提供する。各経路の mar
 | **通貨** | **USD 統一** |
 
 **実例**:
-- モデル: Claude Sonnet
+- モデル: `anthropic/claude-sonnet-4-6`
 - 入力: 1000 token → $3.00 / 1M = $0.003
 - 出力: 500 token → $15.00 / 1M = $0.0075
 - 実費: $0.0105

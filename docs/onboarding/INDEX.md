@@ -1,6 +1,6 @@
 # AKARI オンボーディング
 
-> **正典 (Layer A)**: 本ディレクトリは AKARI Onboarding の公開正典です。
+> **公開正典（配置層: 公開正典 / Layer 4 CC BY 4.0）**: 本ディレクトリは AKARI Onboarding の公開正典です。
 > Hub (`akari-os/docs/onboarding/`) は同期コピー（編集は本ディレクトリで行う）。
 >
 > **対象読者**: AKARI を初めて触る人（GitHub 訪問者 / エンドユーザー / 開発者）

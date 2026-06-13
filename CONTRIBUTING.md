@@ -138,8 +138,8 @@ Pool のコンテキストとして保存できるようにした。
 - **基盤コード** (`shell` / `pool-impl` / `agents`): **Apache 2.0**
 - **プロトコル仕様** (`m2c` / `amp` / `ace`): **Apache 2.0**
 - **SDK + Full Tier apps** (`sdk` / `design` / `writer` / `video` / `voice`): **MIT**
-- **公開ドキュメント** (`pool` (docs) / `.github`): **CC BY 4.0**
-- **収益層** (`cloud` / `lp` / `materials`): **proprietary**（外部 contribution 不可）
+- **公開ドキュメント** (`dotgithub`（本リポ）/ `pool-docs`): **CC BY 4.0**
+- **収益層** (`cloud` / `lp` / `materials` / `hub`): **proprietary**（外部 contribution 不可）
 - **その他**: 各リポジトリ参照
 
 PR を送ることは、そのライセンスでの公開に同意したとみなす（CLA なし、DCO なし、シンプルに）。
