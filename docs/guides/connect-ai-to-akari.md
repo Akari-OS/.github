@@ -5,7 +5,7 @@ docs/connect-ai-codex-claude.md。内容修正は正典で行い、ここへ反�
 
 # AKARI を AI（Codex / Claude）で操作する — はじめてガイド
 
-AKARI の各アプリ（**Video / SVG / Sheets / Stage / Design / 3D**）は、**Codex や Claude のような AI から直接操作**できます。
+AKARI の各アプリ（**Video / SVG / Sheets / Stage / Design / 3D / Diagram / FX / Synth / Circuit / Site**）は、**Codex や Claude のような AI から直接操作**できます。
 「この動画をカットして」「このアイコンを描いて」「この表をグラフにして」と頼むと、AI が実際に編集を実行します。
 
 さらに AI は、**いま何が必要かを判断して、自分でアプリを開いて切り替える**こともできます
@@ -44,6 +44,11 @@ AKARI の各アプリ（**Video / SVG / Sheets / Stage / Design / 3D**）は、*
 | **Stage** | `http://127.0.0.1:47622/mcp` | 3D 配置・モーション（`stage_*`） |
 | **Design** | `http://127.0.0.1:47624/mcp` | デザイン（`design_*`） |
 | **3D** | `http://127.0.0.1:47626/mcp` | 3D モデリング（`3d_*`） |
+| **Diagram** | `http://127.0.0.1:47630/mcp` | 図・フローチャート（`diagram_*`） |
+| **FX** | `http://127.0.0.1:47632/mcp` | プロシージャル GPU ビジュアル生成（`fx_*`） |
+| **Synth** | `http://127.0.0.1:47634/mcp` | シンセで音作り・WAV 書き出し（`synth_*`） |
+| **Circuit** | `http://127.0.0.1:47636/mcp` | 回路図（`circuit_*`） |
+| **Site** | `http://127.0.0.1:47638/mcp` | 静的サイト構築・公開（`site_*`） |
 
 > 全部つなぐ必要はありません。**使うアプリ + AKARI shell** をつなげば十分です。
 
@@ -58,21 +63,42 @@ AKARI の各アプリ（**Video / SVG / Sheets / Stage / Design / 3D**）は、*
 > これをやらずに操作しようとすると「接続されていません / タイムアウト」になります。
 > そのときは「AKARI でそのアプリを開く」だけで直ります。
 
+> **接続には認証トークンが必要です。** AKARI を初めて起動すると
+> `~/.akari/secrets/mcp-bridge-token` が自動生成されます（全アプリ共通・`127.0.0.1` のみで使用）。
+> 下の Codex / Claude の手順で、このトークンを渡します。
+
 ---
 
 ## Codex につなぐ
 
+Codex はトークンを**環境変数経由**で読みます。まずトークンを変数にセットします
+（シェルを開き直すと消えるので、`~/.zshrc` 等に書いておくと毎回有効です）。
+
+```bash
+export AKARI_MCP_TOKEN="$(cat ~/.akari/secrets/mcp-bridge-token)"
+```
+
 `~/.codex/config.toml` に、使う窓口を追記します（最低限 shell + 使うアプリ）。
+各エントリに `bearer_token_env_var = "AKARI_MCP_TOKEN"` を付けます。
 
 ```toml
 [mcp_servers.akari-shell]
 url = "http://127.0.0.1:47628/mcp"
+bearer_token_env_var = "AKARI_MCP_TOKEN"
 
 [mcp_servers.akari-video]
 url = "http://127.0.0.1:47616/mcp"
+bearer_token_env_var = "AKARI_MCP_TOKEN"
 
-# 必要なアプリを同様に追記:
+# 必要なアプリを同様に追記（各エントリに bearer_token_env_var を付ける）:
 # akari-svg=47618 / akari-sheets=47620 / akari-stage=47622 / akari-design=47624 / akari-3d=47626
+# akari-diagram=47630 / akari-fx=47632 / akari-synth=47634 / akari-circuit=47636 / akari-site=47638
+```
+
+CLI で追加する場合:
+
+```bash
+codex mcp add akari-shell --url http://127.0.0.1:47628/mcp --bearer-token-env-var AKARI_MCP_TOKEN
 ```
 
 保存して Codex を起動し直すと、`os_*` や `video_*` などのツールが使えるようになります。
@@ -81,18 +107,22 @@ url = "http://127.0.0.1:47616/mcp"
 
 ## Claude（Claude Code）につなぐ
 
-ターミナルでコマンドを実行するだけです。
+ターミナルでコマンドを実行するだけです。各コマンドにトークンを `--header` で渡します。
 
 ```bash
+# トークンを変数に読み込む
+TOKEN="$(cat ~/.akari/secrets/mcp-bridge-token)"
+
 # OS 層（アプリを開く/切替）
-claude mcp add --transport http akari-shell  http://127.0.0.1:47628/mcp
+claude mcp add --transport http akari-shell http://127.0.0.1:47628/mcp --header "Authorization: Bearer $TOKEN"
 # 使うアプリ
-claude mcp add --transport http akari-video   http://127.0.0.1:47616/mcp
-claude mcp add --transport http akari-svg     http://127.0.0.1:47618/mcp
-claude mcp add --transport http akari-sheets  http://127.0.0.1:47620/mcp
-claude mcp add --transport http akari-stage   http://127.0.0.1:47622/mcp
-claude mcp add --transport http akari-design  http://127.0.0.1:47624/mcp
-claude mcp add --transport http akari-3d      http://127.0.0.1:47626/mcp
+claude mcp add --transport http akari-video  http://127.0.0.1:47616/mcp --header "Authorization: Bearer $TOKEN"
+claude mcp add --transport http akari-svg     http://127.0.0.1:47618/mcp --header "Authorization: Bearer $TOKEN"
+claude mcp add --transport http akari-sheets  http://127.0.0.1:47620/mcp --header "Authorization: Bearer $TOKEN"
+claude mcp add --transport http akari-stage   http://127.0.0.1:47622/mcp --header "Authorization: Bearer $TOKEN"
+claude mcp add --transport http akari-design  http://127.0.0.1:47624/mcp --header "Authorization: Bearer $TOKEN"
+claude mcp add --transport http akari-3d      http://127.0.0.1:47626/mcp --header "Authorization: Bearer $TOKEN"
+# 追加アプリ: diagram=47630 / fx=47632 / synth=47634 / circuit=47636 / site=47638（同様に --header を付ける）
 ```
 
 どのプロジェクトでも使いたい場合は `-s user` を付けてユーザー全体に登録します。
@@ -155,6 +185,7 @@ AI が行った操作は AKARI の画面にも追従表示され、`元に戻す
 | 症状 | 対処 |
 |---|---|
 | 「接続されていません」「タイムアウト」「Failed to connect」 | AKARI で**そのアプリを開いているか**確認（窓口が動いているか）。`os_*` 系は AKARI を起動していれば OK。 |
+| `401` / `403` / `Unauthorized` と出る | 認証トークンが未設定/不一致。`~/.akari/secrets/mcp-bridge-token` の中身を再コピーして設定し直す（Claude は `--header`、Codex は `AKARI_MCP_TOKEN` 環境変数）。検証用に認証を切るなら AKARI 側で `AKARI_MCP_AUTH=off` にして再起動（ローカル限定）。 |
 | ツールが見つからない / 古い | アプリを更新・リロードしてから、AI 側で MCP を**つなぎ直す**。 |
 | どんな操作ができるか分からない | AI に「使えるツールを一覧して」と聞く（常に最新が返ります）。 |
 | アプリ名と窓口がわからない | 上の「ポート一覧」を参照。`os_list_apps` でも一覧できます。 |
